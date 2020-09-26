@@ -33,6 +33,7 @@ name: HomeAssistant
 bitrate: 320
 username: frenck@example.com
 password: MySpotifyPassword
+initial_volume: 50
 ```
 
 **Note**: _This is just an example, don't copy and paste it! Create your own!_
@@ -85,6 +86,10 @@ to disallow guests on your network to use the add-on.
 ### Option: `password`
 
 The password you use to login to your Spotify Premium account.
+
+### Option: `initial_volume`
+
+The volume level set on startup.
 
 ## Known issues and limitations
 
