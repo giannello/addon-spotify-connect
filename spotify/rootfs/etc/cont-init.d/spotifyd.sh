@@ -7,6 +7,7 @@ declare username
 declare password
 declare name
 declare bitrate
+declare volume_controller
 
 if ! bashio::config.has_value 'name'; then
     bashio::log.fatal
@@ -27,6 +28,13 @@ if bashio::config.has_value 'username'; then
     {
         echo "username =${username}"
         echo "password =${password}"
+    } >> /etc/spotifyd.conf
+fi
+
+if bashio::config.has_value 'volume_controller'; then
+    volume_controller=$(bashio::config 'volume_controller')
+    {
+        echo "volume_controller = ${volume_controller}"
     } >> /etc/spotifyd.conf
 fi
 
